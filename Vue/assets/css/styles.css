@@ -10,7 +10,7 @@ body {
 }
 
 #header {
-    height: 120px;
+    height: 150px;
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
@@ -39,15 +39,21 @@ body {
     float: left;
     height: 90px;
     margin-top: -10px;
-    animation: girar infinite 10s linear;
+    animation: latir infinite 10s linear;
 }
 
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
     }
-    to {
-        transform: rotate(360deg);
+    53% {
+        transform: scale(1.5, 1.5);
+    }
+    55% {
+        transform: scale(0.95, 0.95);
+    }    
+    100% {
+        transform: scale(1, 1);
     }
 
 }
@@ -85,7 +91,7 @@ body {
 }
 
 #menu a:hover{
-    color: #61dafb;
+color: rgb(0, 251, 151, 1);
 }
 
 #slider{
@@ -96,7 +102,7 @@ body {
     text-shadow: 0px 0px 5px #444;
     /*DEGRADADO CSS*/
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(97,218,251,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,0.7959558823529411) 0%, rgba(0,251,151,1) 15%);
 }
 
 #slider h1{
@@ -340,12 +346,12 @@ textarea{
     }
 }
 
-@media (max-width: 797px){
+@media (max-width: 774px){
     #logo{
         float: none;
         width: 240px;
         margin: 0px auto;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     #menu,
@@ -370,6 +376,10 @@ textarea{
         margin-bottom: 50px;
     }
 
+    #slider{
+        margin-top: 0px;
+    }
+
     #slider h1{
         padding: 120px;
         font-size: 25px;
@@ -380,7 +390,7 @@ textarea{
     }
 }
 
-@media (max-width: 495px){
+@media (max-width: 499px){
     #header{
         min-height: 130px;
         overflow: hidden;
@@ -388,7 +398,7 @@ textarea{
 
     #menu,
     #menu ul{
-        line-height: 50px;
+        line-height: 40px;
     }
 
     #menu ul li{
@@ -406,7 +416,7 @@ textarea{
     }
 
     #slider .btn-white{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     slider.slider-small{
